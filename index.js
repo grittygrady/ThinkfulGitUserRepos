@@ -37,7 +37,6 @@ function fetchUserName() {
 }
 
 function displayResults(responseJson) {
-  alert("it worked!");
   $("#js-handle-headline").text(`${userInput()}'s Repositories`);
   for (let i = 0; i < responseJson.length; i++) {
     $(".js-repos").append(`<a href="https://github.com/${userInput()}/${responseJson[i].name}" target="_blank"><li>${responseJson[i]["name"]}</li></a>`);
